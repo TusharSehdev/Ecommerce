@@ -3,11 +3,31 @@ import PropTypes from 'prop-types'
 import { IoMdSearch } from "react-icons/io";
 import { FaShoppingCart } from "react-icons/fa";
 import { IoCarSportOutline } from "react-icons/io5";
-import Logo from "../assets/Logo.png";
+import Logo from "../../assets/Logo.png";
 import DarkMode from './DarkMode';
 import { MdArrowDropDown } from "react-icons/md";
 
-
+const DropdownLinks =[
+  {
+    id:1,
+    name: "Trending Products",
+    link: "/#",
+  },
+  {
+    id:2,
+    name: "Best Selling",
+    link: "/#",
+  },
+  {
+    id:3,
+    name: "Top Rated",
+    link: "/#",
+  },{
+    id:4,
+    name: "Others",
+    link: "/#",
+  },
+]
 const MenuLinks =[
   {
     id:1,
@@ -31,7 +51,7 @@ const MenuLinks =[
 ]
 function Navbar(props) {
   return (
-    <div className='bg-white dark:bg-gray-900 dark:text-white'>
+    <div className='bg-white dark:bg-gray-900 dark:text-white shadow-md '>
         <div className='py-4'>
             <div className="container flex justify-between items-center">
                 <div className='flex items-center gap-4'>
@@ -49,9 +69,25 @@ function Navbar(props) {
                             </li>
                           ))
                         }
-                        <li className='flex'>
-                          <a className='' href="">Dropdown Links</a>
-                          <MdArrowDropDown className=''/>
+                        <li className='  relative cursor-pointer group gap-4'>
+                          <a href="" className='flex items-center gap-[2px] font-semibold text-gray-500 hover:text-black dark:hover:text-primary py-2 px-1'>
+                            More
+                            <span>
+                              <MdArrowDropDown className='group-hover:rotate-180 duration-300'/>
+                            </span>
+                          </a>
+                          {/* DropDown Links */}
+                          <div className='absolute z-[999] hidden group-hover:block w-[200px] rounded-md bg-white shadow-md dark:bg-gray-900 dark dark:text-primary px-2 py-3'>
+                            <ul className='space-y-2'>
+                              {
+                                DropdownLinks.map((data, index)=>(
+                                <li key={index}>
+                                  <a href={data.link} className='px-2 py-2 text-gray-500 hover:text-black dark:hover:text-white hover:bg-primary/40 font-semibold rounded-xl inline-block w-full'>{data.name}</a>
+                                </li>
+                                ))
+                              }
+                            </ul>
+                          </div>
                         </li>
                       </ul>
                     </div>
