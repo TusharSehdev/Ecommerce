@@ -6,6 +6,7 @@ import Banner from "./components/Banner/Banner";
 import ProductsHome from "./components/Products-home/ProductsHome";
 import Banner2 from "./components/Banner/Banner2";
 import Blogs from "./components/Blogs/Blogs";
+import Partners from "./components/Partners/Partners";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <ProductsHome />
       <Banner2 />
       <Blogs />
+      <Partners />
     </div>
   );
 }
