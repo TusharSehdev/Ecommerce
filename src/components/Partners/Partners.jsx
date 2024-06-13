@@ -5,13 +5,11 @@ import Img3 from "../../assets/brand/br-3.png";
 import Img4 from "../../assets/brand/br-4.png";
 import Img5 from "../../assets/brand/br-5.png";
 
-console.log(Img1, Img2, Img3, Img4, Img5); // Check if images are being imported correctly
-
 const Partners = () => {
   return (
-    <div className="bg-gray-200 min-h-[100px] py-8 mt-24">
+    <div className="bg-gray-200 dark:bg-gray-700 min-h-[100px] py-8 mt-24">
       <div className="container">
-        <div className="grid grid-cols-5 gap-3 place-item-center">
+        <div className="grid grid-cols-5 gap-3 place-items-center opacity-50 ">
           <img src={Img1} alt="" className="w-[80px] dark:invert" />
           <img src={Img2} alt="" className="w-[80px] dark:invert" />
           <img src={Img3} alt="" className="w-[80px] dark:invert" />
@@ -22,5 +20,4 @@ const Partners = () => {
     </div>
   );
 };
-
 export default Partners;

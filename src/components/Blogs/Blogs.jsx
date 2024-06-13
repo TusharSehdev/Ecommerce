@@ -41,7 +41,7 @@ const Blogs = () => {
       {/* blog-content  */}
       <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-3">
         {BlogData.map((data) => (
-          <div className="p-2">
+          <div key={data.id} className="p-2">
             {/* image section  */}
             <div className="overflow-hidden rounded-2xl mb-2">
               <img

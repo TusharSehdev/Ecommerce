@@ -7,6 +7,7 @@ import ProductsHome from "./components/Products-home/ProductsHome";
 import Banner2 from "./components/Banner/Banner2";
 import Blogs from "./components/Blogs/Blogs";
 import Partners from "./components/Partners/Partners";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <Banner2 />
       <Blogs />
       <Partners />
+      <Footer />
     </div>
   );
 }
