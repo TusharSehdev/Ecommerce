@@ -8,7 +8,12 @@ const Banner = () => {
       <div className="rounded-3xl grid grid-cols-1 md:grid-cols-3 gap-6 items-center text-white bg-banner2-color">
         {/* banner heading  */}
 
-        <div className="p-6 sm:p-8">
+        <div
+          data-aos="slide-right"
+          data-aos-duration="500"
+          data-aos-once="true"
+          className="p-6 sm:p-8"
+        >
           <p>30% off</p>
           <h1 className="uppercase text-4xl lg:text-7xl font-bold">
             Happy Hours
@@ -18,7 +23,7 @@ const Banner = () => {
 
         {/* banner image  */}
 
-        <div>
+        <div data-aos="zoom-in" data-aos-once="true">
           <img
             src={Image2}
             alt=""
@@ -28,7 +33,7 @@ const Banner = () => {
 
         {/* Banner Title */}
 
-        <div>
+        <div data-aos="fade-up" data-aos-duration="500" data-aos-once="true">
           <p className="font-bold text-xl">Smart Solo</p>
           <h1 className="uppercase text-4xl lg:text-7xl font-bold">
             Winter Sale

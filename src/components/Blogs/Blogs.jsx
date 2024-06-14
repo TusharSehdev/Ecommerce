@@ -11,6 +11,7 @@ const BlogData = [
     subtitle:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, maiores?",
     dateName: "Jan 10, 2024 By Tushar",
+    aosDelay: "0",
   },
   {
     id: 2,
@@ -19,6 +20,7 @@ const BlogData = [
     subtitle:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, maiores?",
     dateName: "Jan 10, 2024 By Tushar",
+    aosDelay: "200",
   },
   {
     id: 3,
@@ -27,6 +29,7 @@ const BlogData = [
     subtitle:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, maiores?",
     dateName: "Jan 10, 2024 By Tushar",
+    aosDelay: "400",
   },
 ];
 
@@ -43,7 +46,11 @@ const Blogs = () => {
         {BlogData.map((data) => (
           <div key={data.id} className="p-2">
             {/* image section  */}
-            <div className="overflow-hidden rounded-2xl mb-2">
+            <div
+              data-aos="fade-up"
+              data-aos-duration={data.aosDelay}
+              className="overflow-hidden rounded-2xl mb-2"
+            >
               <img
                 src={data.img}
                 alt=""

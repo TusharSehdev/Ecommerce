@@ -9,7 +9,10 @@ const Partners = () => {
   return (
     <div className="bg-gray-200 dark:bg-gray-700 min-h-[100px] py-8 mt-24">
       <div className="container">
-        <div className="grid grid-cols-5 gap-3 place-items-center opacity-50 ">
+        <div
+          data-aos="zoom-out"
+          className="grid grid-cols-5 gap-3 place-items-center opacity-50 "
+        >
           <img src={Img1} alt="" className="w-[80px] dark:invert" />
           <img src={Img2} alt="" className="w-[80px] dark:invert" />
           <img src={Img3} alt="" className="w-[80px] dark:invert" />

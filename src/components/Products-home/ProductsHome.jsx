@@ -17,7 +17,7 @@ const ProductData = [
     id: 2,
     img: Img2,
     title: "Rocky Mountain",
-    price: "#100",
+    price: "$100",
     aosDelay: "200",
   },
   {
